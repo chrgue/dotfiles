@@ -1,0 +1,6 @@
+--target=~/.config
+--ignore=.stowrc
+--ignore=.idea
+--ignore=dotfiles.iml
+--ignore=install.sh
+--ignore=README.md
