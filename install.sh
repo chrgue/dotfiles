@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # variables
-SETUP_DIR="${HOME}/.setup"
+SETUP_DIR="${HOME}/dotfiles"
 DEFAULT_ZSH_CUSTOM=${HOME}/.oh-my-zsh/custom
 
 ## create install directory
@@ -106,11 +106,8 @@ setup_dotfiles() {
   git -C "${SETUP_DIR}" pull || git -C "${SETUP_DIR}" clone https://github.com/chrgue/dotfiles . --depth 1
   echo "Installing dotfiles..."
   # shellcheck disable=SC2035
-  stow -d "${SETUP_DIR}" */
+  stow -d "${SETUP_DIR}" -R */
   echo "Dotfiles installed!"
 }
 
 setup_dotfiles
-
-# clean up install directory
-rm -rf "${SETUP_DIR}"
