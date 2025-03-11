@@ -113,4 +113,4 @@ setup_dotfiles() {
 setup_dotfiles
 
 # clean up install directory
-#rm -rf "${SETUP_DIR}"
+rm -rf "${SETUP_DIR}"
