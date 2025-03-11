@@ -132,7 +132,6 @@ automatically-unhide-macos-hidden-apps = false
     alt-8 = 'workspace 8'
     alt-9 = 'workspace 9'
 
-
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     alt-shift-0 = 'move-node-to-workspace 0 --focus-follows-window'
     alt-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
@@ -153,7 +152,7 @@ automatically-unhide-macos-hidden-apps = false
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     alt-shift-semicolon = 'mode service'
 
-    alt-shift-enter = 'fullscreen'
+    alt-shift-f = 'fullscreen'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -170,10 +169,6 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-j = ['join-with down', 'mode main']
     alt-shift-k = ['join-with up', 'mode main']
     alt-shift-l = ['join-with right', 'mode main']
-
-    down = 'volume down'
-    up = 'volume up'
-    shift-down = ['volume set 0', 'mode main']
 
 
 # auto moving of windows
