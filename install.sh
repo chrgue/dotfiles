@@ -104,7 +104,7 @@ setup_zsh() {
 
 setup_dotfiles() {
   git -C "${SETUP_DIR}" pull || git -C "${SETUP_DIR}" clone https://github.com/chrgue/dotfiles . --depth 1
-  echo "Installing dotfiles...${SETUP_DIR}"
+  echo "Installing dotfiles..."
   # shellcheck disable=SC2035
   stow -d "${SETUP_DIR}" */
   echo "Dotfiles installed!"
