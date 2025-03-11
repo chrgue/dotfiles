@@ -112,3 +112,6 @@ setup_dotfiles() {
 }
 
 setup_dotfiles
+setup_homebrew
+setup_macos
+setup_zsh
