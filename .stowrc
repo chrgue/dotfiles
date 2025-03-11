@@ -1,4 +1,4 @@
---target=~/.config
+--target=~
 --ignore=.stowrc
 --ignore=.idea
 --ignore=dotfiles.iml
