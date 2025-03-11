@@ -57,7 +57,7 @@ setup_macos () {
   # Use F1, F2, etc. keys as standard function keys
   defaults write -g com.apple.keyboard.fnState -bool true
   # Disable Spotlight shortcut
-  defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 "{enabled = 0; value = {parameters = (32, 49, 1048576); type = standard};}"
+  defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 '{ "enabled" = 0; "value" = { "parameters" = (32, 49, 1048576); "type" = "standard"; }; }'
   # Disable Search man Page Index in Terminal
   defaults write pbs NSServicesStatus -dict-add "com.apple.Terminal - Search man Page Index in Terminal - pasteboard" "{key_equivalent = \"\"; }"
   # Disable Suggested and Recent Apps in Dock
@@ -67,6 +67,8 @@ setup_macos () {
   # Disable workspace animation
   defaults write com.apple.dock workspaces-auto-swoosh -bool false
 
+  killall Dock
+  killall SystemUIServer
   echo "MacOS setup complete!"
 }
 
