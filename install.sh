@@ -111,7 +111,7 @@ setup_dotfiles() {
   echo "Dotfiles installed!"
 }
 
-setup_dotfiles
 setup_homebrew
+setup_dotfiles
 setup_macos
 setup_zsh
