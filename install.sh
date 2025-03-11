@@ -66,6 +66,8 @@ setup_macos () {
   defaults write com.apple.dock autohide -bool true
   # Disable workspace animation
   defaults write com.apple.dock workspaces-auto-swoosh -bool false
+  # Disable "Displays have separate Spaces"
+  defaults write com.apple.spaces spans-displays -bool true
 
   killall Dock
   killall SystemUIServer
