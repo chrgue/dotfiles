@@ -68,6 +68,8 @@ setup_macos () {
   defaults write com.apple.dock workspaces-auto-swoosh -bool false
   # Disable "Displays have separate Spaces"
   defaults write com.apple.spaces spans-displays -bool true
+  # Enable Group windows by application
+  defaults write com.apple.dock expose-group-apps -bool true
 
   killall Dock
   killall SystemUIServer
