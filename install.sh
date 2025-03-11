@@ -79,27 +79,26 @@ setup_zsh() {
     "${ZSH}"/tools/upgrade.sh
   fi
 
-  # install powerlevel10k
+  echo "setup powerlevel10k"
   if [[ ! -d "${ZSH_CUSTOM:-$DEFAULT_ZSH_CUSTOM}/themes/powerlevel10k" ]]; then
     git clone https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$DEFAULT_ZSH_CUSTOM}/themes/powerlevel10k"
   else
     git -C "${ZSH_CUSTOM:-$DEFAULT_ZSH_CUSTOM}/themes/powerlevel10k" pull
   fi
 
-  # install zsh-autosuggestions
+  echo "setup zsh-autosuggestions"
   if [[ ! -d "${ZSH_CUSTOM:-$DEFAULT_ZSH_CUSTOM}/plugins/zsh-autosuggestions" ]]; then
     git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM:-$DEFAULT_ZSH_CUSTOM}/plugins/zsh-autosuggestions"
   else
     git -C "${ZSH_CUSTOM:-$DEFAULT_ZSH_CUSTOM}/plugins/zsh-autosuggestions" pull
   fi
 
-  # install zsh-syntax-highlighting
+  echo "setup zsh-syntax-highlighting"
   if [[ ! -d "${ZSH_CUSTOM:-$DEFAULT_ZSH_CUSTOM}/plugins/zsh-syntax-highlighting" ]]; then
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${ZSH_CUSTOM:-$DEFAULT_ZSH_CUSTOM}/plugins/zsh-syntax-highlighting"
   else
     git -C "${ZSH_CUSTOM:-$DEFAULT_ZSH_CUSTOM}/plugins/zsh-syntax-highlighting" pull
   fi
-  echo "Zsh setup complete!"
 }
 
 setup_dotfiles() {
